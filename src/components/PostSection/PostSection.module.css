@@ -1,0 +1,30 @@
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1  {
+    text-align: center;
+}
+
+
+.post {
+    background-color: rgba(153, 168, 255, 0.25);
+    border-radius: 20px;
+    padding: 20px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.body {
+    font-size: 18px;
+}
