@@ -1,0 +1,58 @@
+.overlay {
+    background-color: rgba(31, 30, 71, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.window {
+    background-color: rgba(153, 168, 255);
+    width: 500px;
+    padding: 30px;
+    border-radius: 14px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.title input,
+.text textarea {
+    border: 1px solid #1f1e47;
+    border-radius: 7px;
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: #edeffb;
+    color: #1f1e47;
+    max-width: 440px;
+    max-height: 200px;
+}
+
+.title input:focus,
+.text textarea:focus{
+    outline: none;
+}
+
+.title input::placeholder,
+.text textarea::placeholder {
+    color: #1f1e47;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+.text {
+    margin-top: 20px;
+}
+
+.btn_container {
+    margin-top: 15px;
+}
+
+

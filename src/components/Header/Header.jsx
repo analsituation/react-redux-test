@@ -30,7 +30,7 @@ const Header = (props) => {
                         <input className={styles.search_input} type="text" placeholder={'Search'}/>
                     </div>
                     <div>
-                        <Button text="Добавить пост"/>
+                        <Button text="Добавить пост" />
                     </div>
                 </div>
             </header>
