@@ -15,12 +15,6 @@ const Header = ({setVisibility}) => {
         }
     }
 
-    const showModalHandler = () => {
-        console.log('dad')
-
-        setActiveClass(true)
-    }
-
     return (
         <div>
             <header className={styles.container}>

@@ -8,9 +8,6 @@ import {removePost} from '../../redux/mainSplice'
 const Post = (props) => {
 
     const dispatch = useDispatch()
-    // useEffect(() => {
-    //
-    // }, [props])
 
     return (
         <div className={styles.post}>
@@ -19,7 +16,7 @@ const Post = (props) => {
                     <h2>{props.number} {props.title}</h2>
                 </div>
                 <div className={styles.body}>
-                    {props.text}
+                    {props.body}
                 </div>
             </div>
             <Button onClick={() => dispatch(removePost(props.id))} text="Удалить"/>
