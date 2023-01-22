@@ -16,6 +16,11 @@ function App() {
           <div className={styles.app__container}>
               <Modal visibility={visibility} setVisibility={setVisibility}/>
               <Header setVisibility={setVisibility}/>
+              {/*{*/}
+              {/*    isLoading*/}
+              {/*    ? <h2>Загрузка постов...</h2>*/}
+              {/*    : <PostSection />*/}
+              {/*}*/}
               <PostSection />
           </div>
       </div>)

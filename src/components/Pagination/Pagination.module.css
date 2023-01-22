@@ -1,0 +1,18 @@
+.pagination_block {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.page__btn {
+    padding: 0 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    font-size: 14px;
+
+}
+
+.page__btn:hover {
+    border-bottom: 1px solid #1f1e47;
+    font-size: 16px;
+
+}

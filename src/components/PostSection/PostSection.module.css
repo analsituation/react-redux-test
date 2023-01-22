@@ -29,3 +29,8 @@ h1  {
 .body {
     font-size: 18px;
 }
+
+.info_message {
+    font-size: 28px;
+    text-align: center;
+}
