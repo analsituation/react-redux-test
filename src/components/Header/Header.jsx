@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import styles from './Header.module.css'
 import Button from '../UI/Button'
 
-const Header = (props) => {
+const Header = ({setVisibility}) => {
 
     const [activeClass, setActiveClass] = useState(styles.elements)
 
@@ -13,6 +13,12 @@ const Header = (props) => {
         } else {
             setActiveClass(styles.elements)
         }
+    }
+
+    const showModalHandler = () => {
+        console.log('dad')
+
+        setActiveClass(true)
     }
 
     return (
@@ -30,7 +36,7 @@ const Header = (props) => {
                         <input className={styles.search_input} type="text" placeholder={'Search'}/>
                     </div>
                     <div>
-                        <Button text="Добавить пост" />
+                        <Button text="Добавить пост" onClick={() => setVisibility(true)}/>
                     </div>
                 </div>
             </header>

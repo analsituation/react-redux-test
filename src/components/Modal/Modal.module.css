@@ -1,4 +1,7 @@
 .overlay {
+    display: none;
+}
+.overlay_active {
     background-color: rgba(31, 30, 71, 0.6);
     position: fixed;
     top: 0;
