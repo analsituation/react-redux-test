@@ -34,7 +34,7 @@ export const mainSlice = createSlice({
             state.sortedPosts.push(action.payload)
         },
         removePost: (state, action) => {
-            state.sortedPosts = state.posts.filter(p => p.id !== action.payload)
+            state.sortedPosts = state.sortedPosts.filter(p => p.id !== action.payload)
         },
         setPage: (state, action) => {
             state.currentPage = action.payload
