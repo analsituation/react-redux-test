@@ -3,6 +3,7 @@ import {APIFetches} from '../API/api'
 
 const initialState = {
     posts: [],
+    sortedPosts: [],
     isLoading: false,
     totalCount: 0,
     pageSize: 10,
@@ -37,30 +38,40 @@ export const mainSlice = createSlice({
         },
         setPage: (state, action) => {
             state.currentPage = action.payload
+        },
+        sortPosts: (state, action) => {
+            switch (action.payload) {
+            case 'A - Z': {
+                state.sortedPosts = [...state.posts].sort((a, b) => a['title'].localeCompare(b['title']))
+                break
+            }
+            case 'Z - A': {
+                state.sortedPosts = [...state.posts].sort((a, b) => a['title'].localeCompare(b['title'])).reverse()
+                break
+            }
+            case '':
+                state.sortedPosts = state.posts
+            }
+        },
+        searchPosts: (state, action) => {
+            state.sortedPosts = state.posts.filter(post => post.title.includes(action.payload))
         }
-        // setLoadingStatus: (state, action) => {
-        //
-        // }
-        // setPosts: (state, action) => {
-        //     state.posts = action.payload
-        // },
     },
     extraReducers: {
-        [setPosts.pending]: (state, action) => {
+        [setPosts.pending]: (state) => {
             state.isLoading = true
         },
         [setPosts.fulfilled]: (state, action) => {
             state.isLoading = false
-            // setPosts(action.payload)
             state.posts = action.payload.posts
+            state.sortedPosts = state.posts
             state.totalCount = action.payload.totalCount
         },
-        [setPosts.rejected]: (state, action) => {
+        [setPosts.rejected]: (state) => {
             state.isLoading = false
         }
     }
 })
 
-// export const {addPost, removePost, setPosts} = mainSlice.actions
-export const {addPost, removePost, setPage} = mainSlice.actions
+export const {addPost, removePost, setPage, sortPosts, searchPosts} = mainSlice.actions
 export default mainSlice.reducer

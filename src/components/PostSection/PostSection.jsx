@@ -8,7 +8,7 @@ import Pagination from '../Pagination/Pagination'
 
 const PostSection = () => {
 
-    const posts = useSelector((state) => state.main.posts)
+    const posts = useSelector((state) => state.main.sortedPosts)
     const isLoading = useSelector((state) => state.main.isLoading)
     const dispatch = useDispatch()
     const pageSize = useSelector(state => state.main.pageSize)
@@ -16,7 +16,6 @@ const PostSection = () => {
 
     useEffect( () => {
         dispatch(setPosts({limit: pageSize, page: currentPage}))
-        debugger
     }, [currentPage])
 
     let infoMessage
