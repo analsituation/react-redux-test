@@ -31,10 +31,10 @@ export const mainSlice = createSlice({
     initialState,
     reducers: {
         addPost: (state, action) => {
-            state.posts.push(action.payload)
+            state.sortedPosts.push(action.payload)
         },
         removePost: (state, action) => {
-            state.posts = state.posts.filter(p => p.id !== action.payload)
+            state.sortedPosts = state.posts.filter(p => p.id !== action.payload)
         },
         setPage: (state, action) => {
             state.currentPage = action.payload
