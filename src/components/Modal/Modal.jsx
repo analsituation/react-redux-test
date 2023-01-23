@@ -19,7 +19,7 @@ const Modal = ({visibility, setVisibility}) => {
             const newPost = {
                 id: Date.now(),
                 title: values.title,
-                text: values.text,
+                body: values.text,
             }
             dispatch(addPost(newPost))
             setValues({title: '', text: ''})
